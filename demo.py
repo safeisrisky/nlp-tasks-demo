@@ -7,12 +7,16 @@ from utils import get_message
 from utils import get_system_prompt, get_companies_prompt, get_non_companies_prompt
 from st_pages import show_pages, Page, add_page_title
 
-st.set_page_config(initial_sidebar_state="collapsed", layout="wide")
+st.set_page_config(
+    initial_sidebar_state="collapsed",
+    layout="wide",
+    page_icon=":home:",
+    page_title="Home",
+)
 
 if not utils.check_password():
     st.stop()
 
-#  :home:, :atom_symbol:, :toolbox:
 show_pages(
     [
         Page("demo.py", "Home", "🏠"),
@@ -21,7 +25,6 @@ show_pages(
     ]
 )
 
-add_page_title()
 
 demo_purpose = """<div style="text-align: justify;">
 The purpose of the demo is to showcase the ways in which some of the common NLP tasks can be performed using various open source libraries.

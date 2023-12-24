@@ -7,7 +7,7 @@ from utils import get_message
 from utils import get_system_prompt, get_companies_prompt, get_non_companies_prompt
 from st_pages import show_pages, Page, add_page_title
 
-# st.set_page_config(initial_sidebar_state="collapsed", layout="wide")
+st.set_page_config(initial_sidebar_state="collapsed", layout="wide")
 
 if not utils.check_password():
     st.stop()
@@ -16,8 +16,8 @@ if not utils.check_password():
 show_pages(
     [
         Page("demo.py", "Home", "🏠"),
-        Page("pages/1_nlp_llm.py", "NLP Tasks via LLM", "⚛️"),
-        Page("pages/2_nlp_spacy.py", "NLP Tasks via Spacy", "🧰"),
+        Page("apps/1_nlp_llm.py", "NLP Tasks via LLM", "⚛️"),
+        Page("apps/2_nlp_spacy.py", "NLP Tasks via Spacy", "🧰"),
     ]
 )
 

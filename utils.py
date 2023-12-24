@@ -1,5 +1,4 @@
 import streamlit as st
-import hmac
 
 
 def get_message(role, prompt):

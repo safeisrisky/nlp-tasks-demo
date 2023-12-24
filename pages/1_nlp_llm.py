@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import openai
-import openai
 import json
 import utils
 from utils import get_message

@@ -5,9 +5,9 @@ import json
 import utils
 from utils import get_message
 from utils import get_system_prompt, get_companies_prompt, get_non_companies_prompt
-from st_pages import show_pages, Page
+from st_pages import show_pages, Page, add_page_title
 
-st.set_page_config(initial_sidebar_state="collapsed", layout="wide")
+# st.set_page_config(initial_sidebar_state="collapsed", layout="wide")
 
 if not utils.check_password():
     st.stop()
@@ -20,6 +20,8 @@ show_pages(
         Page("pages/2_nlp_spacy.py", "NLP Tasks via Spacy", "🧰"),
     ]
 )
+
+add_page_title()
 
 demo_purpose = """<div style="text-align: justify;">
 The purpose of the demo is to showcase the ways in which some of the common NLP tasks can be performed using various open source libraries.

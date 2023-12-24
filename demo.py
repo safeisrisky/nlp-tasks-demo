@@ -12,12 +12,12 @@ st.set_page_config(initial_sidebar_state="collapsed", layout="wide")
 if not utils.check_password():
     st.stop()
 
-
+#  :home:, :atom_symbol:, :toolbox:
 show_pages(
     [
-        Page("demo.py", "Home", ":house:"),
-        Page("pages/1_nlp_llm.py", "NLP Tasks via LLM", ":atom_symbol:"),
-        Page("pages/2_nlp_spacy.py", "NLP Tasks via Spacy", ":toolbox:"),
+        Page("demo.py", "Home", "🏠"),
+        Page("pages/1_nlp_llm.py", "NLP Tasks via LLM", "⚛️"),
+        Page("pages/2_nlp_spacy.py", "NLP Tasks via Spacy", "🧰"),
     ]
 )
 
